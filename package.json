@@ -1,0 +1,23 @@
+{
+  "name": "mangasteen-sources-official",
+  "version": "1.0.0",
+  "description": "Official source extensions for the MangaSteen manga reader",
+  "author": "CoderTheory",
+  "license": "MIT",
+  "type": "commonjs",
+  "scripts": {
+    "local": "node local_runner.js mangadex",
+    "test": "node local_runner.js mangadex --fixtures",
+    "typecheck": "tsc --noEmit",
+    "build": "esbuild sources/mangadex/main.js --bundle --outfile=sources/mangadex/release.js --platform=browser --target=es2020 --format=cjs",
+    "record": "node tools/record-fixtures.js mangadex"
+  },
+  "dependencies": {
+    "axios": "^1.13.5",
+    "cheerio": "^1.2.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0",
+    "typescript": "^5.6.0"
+  }
+}

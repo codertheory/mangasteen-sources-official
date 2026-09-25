@@ -1,0 +1,9 @@
+[
+  { "name": "popular-page-1", "function": "getPopularManga", "args": [1] },
+  { "name": "latest-page-1", "function": "getLatestManga", "args": [1] },
+  { "name": "search-eminence", "function": "searchManga", "args": ["eminence in shadow", 1] },
+  { "name": "details-eminence", "function": "getMangaDetails", "args": ["https://mangadex.org/title/77bee52c-d2d6-44ad-a33a-1734c1fe696a/kage-no-jitsuryokusha-ni-naritakute"] },
+  { "name": "chapters-eminence", "function": "getChapterList", "args": ["https://mangadex.org/title/77bee52c-d2d6-44ad-a33a-1734c1fe696a"] },
+  { "name": "pages-eminence-ch1", "function": "getPageList", "args": ["https://mangadex.org/chapter/3c652754-fbf7-4465-be54-f61e50eadc5a"] },
+  { "name": "details-licensed-solo-leveling", "function": "getMangaDetails", "args": ["https://mangadex.org/title/32d76d19-8a05-4db0-9fc2-e0b0648fe9d0"] }
+]

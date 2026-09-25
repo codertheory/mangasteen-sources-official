@@ -1,0 +1,50 @@
+[
+  {
+    "url": "https://api.mangadex.org/manga?limit=20&offset=0&includes%5B%5D=cover_art&includes%5B%5D=author&includes%5B%5D=artist&contentRating%5B%5D=safe&contentRating%5B%5D=suggestive&contentRating%5B%5D=erotica&hasAvailableChapters=true&availableTranslatedLanguage%5B%5D=en&order%5BfollowedCount%5D=desc",
+    "method": "GET",
+    "response": "http-718b2739cfe3.json",
+    "status": 200
+  },
+  {
+    "url": "https://api.mangadex.org/manga?limit=20&offset=0&includes%5B%5D=cover_art&includes%5B%5D=author&includes%5B%5D=artist&contentRating%5B%5D=safe&contentRating%5B%5D=suggestive&contentRating%5B%5D=erotica&hasAvailableChapters=true&availableTranslatedLanguage%5B%5D=en&order%5BlatestUploadedChapter%5D=desc",
+    "method": "GET",
+    "response": "http-5af2ab6b5bb6.json",
+    "status": 200
+  },
+  {
+    "url": "https://api.mangadex.org/manga?limit=20&offset=0&includes%5B%5D=cover_art&includes%5B%5D=author&includes%5B%5D=artist&contentRating%5B%5D=safe&contentRating%5B%5D=suggestive&contentRating%5B%5D=erotica&hasAvailableChapters=true&availableTranslatedLanguage%5B%5D=en&title=eminence%20in%20shadow&order%5Brelevance%5D=desc",
+    "method": "GET",
+    "response": "http-e5e195e6634b.json",
+    "status": 200
+  },
+  {
+    "url": "https://api.mangadex.org/manga/77bee52c-d2d6-44ad-a33a-1734c1fe696a?includes%5B%5D=cover_art&includes%5B%5D=author&includes%5B%5D=artist",
+    "method": "GET",
+    "response": "http-3d89c591f29b.json",
+    "status": 200
+  },
+  {
+    "url": "https://api.mangadex.org/manga/77bee52c-d2d6-44ad-a33a-1734c1fe696a/feed?limit=500&offset=0&translatedLanguage%5B%5D=en&order%5Bvolume%5D=desc&order%5Bchapter%5D=desc&includes%5B%5D=scanlation_group&contentRating%5B%5D=safe&contentRating%5B%5D=suggestive&contentRating%5B%5D=erotica",
+    "method": "GET",
+    "response": "http-c2d334413312.json",
+    "status": 200
+  },
+  {
+    "url": "https://api.mangadex.org/at-home/server/3c652754-fbf7-4465-be54-f61e50eadc5a",
+    "method": "GET",
+    "response": "http-f8b9a5859837.json",
+    "status": 200
+  },
+  {
+    "url": "https://api.mangadex.org/manga/32d76d19-8a05-4db0-9fc2-e0b0648fe9d0?includes%5B%5D=cover_art&includes%5B%5D=author&includes%5B%5D=artist",
+    "method": "GET",
+    "response": "http-59cf7f6aca75.json",
+    "status": 200
+  },
+  {
+    "url": "https://api.mangadex.org/manga/32d76d19-8a05-4db0-9fc2-e0b0648fe9d0/feed?limit=500&offset=0&translatedLanguage%5B%5D=en&order%5Bvolume%5D=desc&order%5Bchapter%5D=desc&includes%5B%5D=scanlation_group&contentRating%5B%5D=safe&contentRating%5B%5D=suggestive&contentRating%5B%5D=erotica",
+    "method": "GET",
+    "response": "http-692a9acc9d4d.json",
+    "status": 200
+  }
+]

@@ -1,0 +1,5 @@
+node_modules/
+sources/*/release.js
+
+.idea/
+.vscode/

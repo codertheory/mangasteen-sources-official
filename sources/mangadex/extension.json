@@ -1,0 +1,19 @@
+{
+  "name": "MangaDex",
+  "version": "1.0.0",
+  "lang": "en",
+  "iconUrl": "https://mangadex.org/pwa/icons/icon-180.png",
+  "icon": "icon.png",
+  "apiVersion": 1,
+  "hostAllowlist": ["api.mangadex.org"],
+  "capabilities": [],
+  "nsfw": false,
+  "maxRequestsPerSecond": 4,
+  "cachePolicy": {
+    "getPopularManga": 300,
+    "getLatestManga": 120,
+    "searchManga": 60,
+    "getMangaDetails": 300,
+    "getChapterList": 300
+  }
+}
