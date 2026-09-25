@@ -1,6 +1,6 @@
-# MangaSteen official sources
+# Mangasteen official sources
 
-The default source repository for the [MangaSteen](https://mangasteen.codertheory.dev)
+The default source repository for the [Mangasteen](https://mangasteen.codertheory.dev)
 manga reader. The app offers it as **"Official sources (recommended)"** during onboarding and on
 the Extensions screen; users can also add any other repository built from the
 [extension template](https://github.com/codertheory/Mangasteen-extension-template).

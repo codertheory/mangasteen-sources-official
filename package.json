@@ -1,7 +1,7 @@
 {
   "name": "mangasteen-sources-official",
   "version": "1.0.0",
-  "description": "Official source extensions for the MangaSteen manga reader",
+  "description": "Official source extensions for the Mangasteen manga reader",
   "author": "CoderTheory",
   "license": "MIT",
   "type": "commonjs",
