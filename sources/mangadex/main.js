@@ -32,7 +32,7 @@ const MAX_CHAPTER_PAGES = 10; // 5 000 chapters — nothing on MangaDex is longe
 const MAX_OFFSET = 10000; // MangaDex refuses offset + limit > 10 000
 const CONTENT_RATINGS = ['safe', 'suggestive', 'erotica']; // never 'pornographic'
 const HEADERS = {
-    'User-Agent': 'MangaSteen (https://github.com/codertheory/mangasteen)',
+    'User-Agent': 'MangaSteen/1.0 (https://mangasteen.codertheory.dev; support@codertheory.dev)',
     'Accept': 'application/json',
 };
 
