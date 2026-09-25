@@ -25,6 +25,13 @@ sources/<id>/fixtures/        recorded HTTP responses + golden outputs for offli
 tools/record-fixtures.js      re-records fixtures from the live API
 ```
 
+## Signing
+
+Every `main.js` is Ed25519-signed against [`publickey.pem`](./publickey.pem) at the repo root (the
+same key as the community repo). The app verifies the signature on every sync and rejects a
+source whose signature doesn't match, so **after editing any `main.js`, run `npm run sign` before
+committing** (private key: `~/.mangasteen-signing-key.pem`, or `MANGASTEEN_SIGNING_KEY`).
+
 ## Developing
 
 ```bash
@@ -33,6 +40,7 @@ npm run local        # run the source against the live API
 npm test             # replay recorded fixtures offline and compare to golden outputs
 npm run typecheck    # check main.js against the host contract (host-globals.d.ts)
 npm run record       # re-record fixtures after changing request URLs; commit the result
+npm run sign         # re-sign sources/*/main.js (required after any main.js change)
 ```
 
 Bump `version` in `extension.json` on every change — the app uses it to detect updates.
