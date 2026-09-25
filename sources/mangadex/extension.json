@@ -1,11 +1,13 @@
 {
   "name": "MangaDex",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "lang": "en",
   "iconUrl": "https://mangadex.org/pwa/icons/icon-180.png",
   "icon": "icon.png",
   "apiVersion": 1,
-  "hostAllowlist": ["api.mangadex.org"],
+  "hostAllowlist": [
+    "api.mangadex.org"
+  ],
   "capabilities": [],
   "nsfw": false,
   "maxRequestsPerSecond": 4,

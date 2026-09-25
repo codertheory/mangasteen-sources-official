@@ -2,7 +2,7 @@
 
 /**
  * @name MangaDex
- * @version 1.0.0
+ * @version 1.0.1
  * @lang en
  * @iconUrl https://mangadex.org/pwa/icons/icon-180.png
  *
@@ -176,12 +176,15 @@ function genresOf(attributes) {
 }
 
 /**
+ * Epoch milliseconds as a numeric *string*. The host's JS bridge turns any number wider than an
+ * Int into a Double and renders it in exponent form (`1.786811671E12`), which its Long fields
+ * reject; a numeric string decodes cleanly on every shipped app version (MANGASTEEN-39).
  * @param {string | null | undefined} iso
- * @returns {number} epoch ms, 0 when unknown
+ * @returns {string} epoch ms, "0" when unknown
  */
 function epochMs(iso) {
     const t = iso ? Date.parse(iso) : NaN;
-    return Number.isFinite(t) ? t : 0;
+    return Number.isFinite(t) ? t.toFixed(0) : '0';
 }
 
 /**
