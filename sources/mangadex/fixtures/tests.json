@@ -1,6 +1,7 @@
 [
   { "name": "popular-page-1", "function": "getPopularManga", "args": [1] },
   { "name": "latest-page-1", "function": "getLatestManga", "args": [1] },
+  { "name": "latest-page-1-hide-adult", "function": "getLatestManga", "args": [1, {"hideAdult": true}] },
   { "name": "search-eminence", "function": "searchManga", "args": ["eminence in shadow", 1] },
   { "name": "details-eminence", "function": "getMangaDetails", "args": ["https://mangadex.org/title/77bee52c-d2d6-44ad-a33a-1734c1fe696a/kage-no-jitsuryokusha-ni-naritakute"] },
   { "name": "chapters-eminence", "function": "getChapterList", "args": ["https://mangadex.org/title/77bee52c-d2d6-44ad-a33a-1734c1fe696a"] },

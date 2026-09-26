@@ -12,6 +12,12 @@
     "status": 200
   },
   {
+    "url": "https://api.mangadex.org/manga?limit=20&offset=0&includes%5B%5D=cover_art&includes%5B%5D=author&includes%5B%5D=artist&contentRating%5B%5D=safe&contentRating%5B%5D=suggestive&hasAvailableChapters=true&availableTranslatedLanguage%5B%5D=en&order%5BlatestUploadedChapter%5D=desc",
+    "method": "GET",
+    "response": "http-81a1acfb6d91.json",
+    "status": 200
+  },
+  {
     "url": "https://api.mangadex.org/manga?limit=20&offset=0&includes%5B%5D=cover_art&includes%5B%5D=author&includes%5B%5D=artist&contentRating%5B%5D=safe&contentRating%5B%5D=suggestive&contentRating%5B%5D=erotica&hasAvailableChapters=true&availableTranslatedLanguage%5B%5D=en&title=eminence%20in%20shadow&order%5Brelevance%5D=desc",
     "method": "GET",
     "response": "http-e5e195e6634b.json",

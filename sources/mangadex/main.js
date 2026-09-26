@@ -2,7 +2,7 @@
 
 /**
  * @name MangaDex
- * @version 1.0.1
+ * @version 1.0.2
  * @lang en
  * @iconUrl https://mangadex.org/pwa/icons/icon-180.png
  *
@@ -70,9 +70,23 @@ async function apiGet(path, pairs) {
     return json;
 }
 
-/** @returns {Array<[string, string]>} */
-function contentRatingPairs() {
-    return CONTENT_RATINGS.map(r => /** @type {[string, string]} */ (['contentRating[]', r]));
+/**
+ * Host hints passed to listing/search calls. `hideAdult` is set while the app's Spicy Filter
+ * is on; older app builds don't pass the argument at all.
+ * @typedef {{ hideAdult?: boolean }} ListingOptions
+ */
+
+/**
+ * With `hideAdult`, erotica is left out server-side so filtered pages still come back full
+ * (the app would otherwise drop those entries locally, via their "Adult" tag).
+ * @param {ListingOptions} [options]
+ * @returns {Array<[string, string]>}
+ */
+function contentRatingPairs(options) {
+    const ratings = options && options.hideAdult
+        ? CONTENT_RATINGS.filter(r => r !== 'erotica')
+        : CONTENT_RATINGS;
+    return ratings.map(r => /** @type {[string, string]} */ (['contentRating[]', r]));
 }
 
 // ---------------------------------------------------------------------------
@@ -249,9 +263,10 @@ function idFromUrl(url) {
 /**
  * @param {number} page 1-based
  * @param {Array<[string, string]>} extra order / filter pairs
+ * @param {ListingOptions} [options]
  * @returns {Promise<SourceManga[]>}
  */
-async function listManga(page, extra) {
+async function listManga(page, extra, options) {
     const offset = (Math.max(1, page) - 1) * PAGE_SIZE;
     if (offset + PAGE_SIZE > MAX_OFFSET) return [];
     const json = await apiGet('/manga', [
@@ -260,7 +275,7 @@ async function listManga(page, extra) {
         ['includes[]', 'cover_art'],
         ['includes[]', 'author'],
         ['includes[]', 'artist'],
-        ...contentRatingPairs(),
+        ...contentRatingPairs(options),
         ['hasAvailableChapters', 'true'],
         ['availableTranslatedLanguage[]', LANG],
         ...extra,
@@ -269,21 +284,21 @@ async function listManga(page, extra) {
     return data.map((/** @type {any} */ m) => toManga(m, 256));
 }
 
-/** @param {number} page */
-globalThis.getPopularManga = async function getPopularManga(page) {
-    return listManga(page, [['order[followedCount]', 'desc']]);
+/** @param {number} page @param {ListingOptions} [options] */
+globalThis.getPopularManga = async function getPopularManga(page, options) {
+    return listManga(page, [['order[followedCount]', 'desc']], options);
 };
 
-/** @param {number} page */
-globalThis.getLatestManga = async function getLatestManga(page) {
-    return listManga(page, [['order[latestUploadedChapter]', 'desc']]);
+/** @param {number} page @param {ListingOptions} [options] */
+globalThis.getLatestManga = async function getLatestManga(page, options) {
+    return listManga(page, [['order[latestUploadedChapter]', 'desc']], options);
 };
 
-/** @param {string} query @param {number} page */
-globalThis.searchManga = async function searchManga(query, page) {
+/** @param {string} query @param {number} page @param {ListingOptions} [options] */
+globalThis.searchManga = async function searchManga(query, page, options) {
     const q = (query || '').trim();
     if (!q) return [];
-    return listManga(page, [['title', q], ['order[relevance]', 'desc']]);
+    return listManga(page, [['title', q], ['order[relevance]', 'desc']], options);
 };
 
 // ---------------------------------------------------------------------------
