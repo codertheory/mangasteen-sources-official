@@ -1,0 +1,67 @@
+[
+  {
+    "name": "popular-page-1",
+    "function": "getPopularManga",
+    "args": [
+      1
+    ]
+  },
+  {
+    "name": "popular-page-2",
+    "function": "getPopularManga",
+    "args": [
+      2
+    ]
+  },
+  {
+    "name": "latest-page-1",
+    "function": "getLatestManga",
+    "args": [
+      1
+    ]
+  },
+  {
+    "name": "search-pepper",
+    "function": "searchManga",
+    "args": [
+      "pepper",
+      1
+    ]
+  },
+  {
+    "name": "search-no-match",
+    "function": "searchManga",
+    "args": [
+      "solo leveling",
+      1
+    ]
+  },
+  {
+    "name": "details",
+    "function": "getMangaDetails",
+    "args": [
+      "https://www.peppercarrot.com/en/webcomics/index.html"
+    ]
+  },
+  {
+    "name": "chapters",
+    "function": "getChapterList",
+    "args": [
+      "https://www.peppercarrot.com/en/webcomics/index.html"
+    ]
+  },
+  {
+    "name": "pages-ep24",
+    "function": "getPageList",
+    "args": [
+      "https://www.peppercarrot.com/en/webcomic/ep24_The-Unity-Tree.html"
+    ]
+  },
+  {
+    "name": "pages-ep28-gif",
+    "function": "getPageList",
+    "args": [
+      "https://www.peppercarrot.com/en/webcomic/ep28_The-Festivities.html"
+    ]
+  }
+]

@@ -14,6 +14,16 @@ of it. Nothing is bundled into the app: the app fetches this repository exactly 
 | Source | Basis | Content policy |
 | --- | --- | --- |
 | `mangadex` | [MangaDex public API](https://api.mangadex.org/docs/); MangaDex explicitly allows third-party clients subject to its API rules (descriptive User-Agent, rate limits, no ads, credit scanlation groups). | `pornographic` rating is never requested. `erotica` is tagged **Adult** and `suggestive` tagged **Suggestive** so the app's Spicy Filter can hide them. Licensed titles that only carry external (publisher) chapters show an empty chapter list. |
+| `pepper-and-carrot` | [Pepper&Carrot](https://www.peppercarrot.com) by David Revoy, [CC BY 4.0](https://www.peppercarrot.com/en/license/index.html); the site documents a public [episode index and image paths](https://www.peppercarrot.com/en/documentation/130_API.html) for apps. | All ages. English only: one series, one chapter per episode. The author prohibits AI derivation; pages are shown unmodified. |
+
+## Credits and attribution
+
+- **Pepper&Carrot**: "Pepper&Carrot by David Revoy, www.peppercarrot.com, CC BY 4.0"
+  (<https://creativecommons.org/licenses/by/4.0/>). Webcomics, translations and artworks are CC BY 4.0
+  unless noted otherwise; the author states that AI derivation is prohibited. Licence page:
+  <https://www.peppercarrot.com/en/license/index.html>. Each episode's final page is its credits page
+  and is always included. Three episode pages are animated GIFs the index does not flag (`GIF_PAGES` in
+  `main.js`); when a new episode lands, probe its pages and update the list.
 
 ## Layout
 

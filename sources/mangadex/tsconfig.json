@@ -1,0 +1,4 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["main.js", "../mangadex/host-globals.d.ts"]
+}

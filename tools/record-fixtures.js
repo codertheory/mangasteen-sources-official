@@ -11,7 +11,7 @@ const fs = require('fs');
 const path = require('path');
 const nodeCrypto = require('node:crypto');
 
-const SOURCE = process.argv[2] || 'mangadex';
+const SOURCE = process.argv[2] || 'mangadex'; // npm run record -- <source>
 const ROOT = path.join(__dirname, '..', 'sources', SOURCE);
 const FIXTURES = path.join(ROOT, 'fixtures');
 const EXPECTED = path.join(FIXTURES, 'expected');
@@ -22,6 +22,7 @@ const manifest = [];
 
 globalThis.httpGet = async function (url, options = {}) {
     const method = (options.method || 'GET').toUpperCase();
+    await new Promise(r => setTimeout(r, 500)); // stay polite to the live service
     const res = await fetch(url, { method, headers: options.headers || {}, body: options.body });
     const body = await res.text();
     const file = 'http-' + nodeCrypto.createHash('sha1').update(method + ' ' + url).digest('hex').slice(0, 12) + '.json';

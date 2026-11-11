@@ -1,0 +1,22 @@
+{
+  "name": "Pepper&Carrot",
+  "version": "1.0.0",
+  "lang": "en",
+  "iconUrl": "https://www.peppercarrot.com/core/img/favicon.png",
+  "icon": "icon.png",
+  "apiVersion": 1,
+  "hostAllowlist": [
+    "peppercarrot.com",
+    "www.peppercarrot.com"
+  ],
+  "capabilities": [],
+  "nsfw": false,
+  "maxRequestsPerSecond": 2,
+  "cachePolicy": {
+    "getPopularManga": 3600,
+    "getLatestManga": 3600,
+    "searchManga": 3600,
+    "getMangaDetails": 3600,
+    "getChapterList": 3600
+  }
+}
