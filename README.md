@@ -15,6 +15,7 @@ of it. Nothing is bundled into the app: the app fetches this repository exactly 
 | --- | --- | --- |
 | `mangadex` | [MangaDex public API](https://api.mangadex.org/docs/); MangaDex explicitly allows third-party clients subject to its API rules (descriptive User-Agent, rate limits, no ads, credit scanlation groups). | `pornographic` rating is never requested. `erotica` is tagged **Adult** and `suggestive` tagged **Suggestive** so the app's Spicy Filter can hide them. Licensed titles that only carry external (publisher) chapters show an empty chapter list. |
 | `pepper-and-carrot` | [Pepper&Carrot](https://www.peppercarrot.com) by David Revoy, [CC BY 4.0](https://www.peppercarrot.com/en/license/index.html); the site documents a public [episode index and image paths](https://www.peppercarrot.com/en/documentation/130_API.html) for apps. | All ages. English only: one series, one chapter per episode. The author prohibits AI derivation; pages are shown unmodified. |
+| `xkcd` | [xkcd](https://xkcd.com) by Randall Munroe, [CC BY-NC 2.5](https://xkcd.com/license.html); the author documents a [JSON interface](https://xkcd.com/json.html) for automated use, and `robots.txt` allows the archive and comic pages. | All ages. One series, one chapter per comic. Non-commercial licence: keep the app free of ads and paid features for this source. |
 
 ## Credits and attribution
 
@@ -24,6 +25,9 @@ of it. Nothing is bundled into the app: the app fetches this repository exactly 
   <https://www.peppercarrot.com/en/license/index.html>. Each episode's final page is its credits page
   and is always included. Three episode pages are animated GIFs the index does not flag (`GIF_PAGES` in
   `main.js`); when a new episode lands, probe its pages and update the list.
+- **xkcd**: "xkcd.com by Randall Munroe, CC BY-NC 2.5" (<https://creativecommons.org/licenses/by-nc/2.5/>).
+  Free to reuse non-commercially with credit and a link back (<https://xkcd.com/license.html>). Alt text
+  is not exposed (the chapter list comes from one archive request; alt text is only in each comic's JSON).
 
 ## Layout
 

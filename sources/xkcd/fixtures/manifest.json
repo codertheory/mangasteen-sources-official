@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://xkcd.com/archive/",
+    "method": "GET",
+    "response": "http-fc8c7f3a3583.json",
+    "status": 200
+  },
+  {
+    "url": "https://xkcd.com/327/info.0.json",
+    "method": "GET",
+    "response": "http-9a88fb828dc4.json",
+    "status": 200
+  },
+  {
+    "url": "https://xkcd.com/1/info.0.json",
+    "method": "GET",
+    "response": "http-1e021d1fcad6.json",
+    "status": 200
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "title": "xkcd",
+    "url": "https://xkcd.com/archive/",
+    "coverUrl": "https://imgs.xkcd.com/comics/barrel_cropped_(1).jpg",
+    "description": "A webcomic of romance, sarcasm, math, and language, by Randall Munroe. Stick figures, one comic at a time.\n\nxkcd.com by Randall Munroe, licensed under CC BY-NC 2.5 (https://creativecommons.org/licenses/by-nc/2.5/, https://xkcd.com/license.html). Non-commercial use only; credit and link back to xkcd.com.",
+    "author": "Randall Munroe",
+    "artist": "Randall Munroe",
+    "status": "Ongoing",
+    "genres": [
+      "Webcomic",
+      "Comedy",
+      "Science",
+      "Humor",
+      "All Ages"
+    ],
+    "lastUpdate": "0"
+  }
+]

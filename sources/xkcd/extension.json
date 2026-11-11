@@ -1,0 +1,21 @@
+{
+  "name": "xkcd",
+  "version": "1.0.0",
+  "lang": "en",
+  "iconUrl": "https://xkcd.com/s/919f27.ico",
+  "icon": "icon.png",
+  "apiVersion": 1,
+  "hostAllowlist": [
+    "xkcd.com"
+  ],
+  "capabilities": [],
+  "nsfw": false,
+  "maxRequestsPerSecond": 1,
+  "cachePolicy": {
+    "getPopularManga": 3600,
+    "getLatestManga": 3600,
+    "searchManga": 3600,
+    "getMangaDetails": 600,
+    "getChapterList": 600
+  }
+}
