@@ -1,0 +1,45 @@
+{
+  "formatVersion": 1,
+  "sources": [
+    {
+      "path": "sources/mangadex",
+      "name": "MangaDex",
+      "version": "1.0.2",
+      "hash": "sha256-b7763cc866077553e1eb4a9d69159aaffac503918e3f1c9d49cf9b97a8e69c16",
+      "files": [
+        "extension.json",
+        "host-globals.d.ts",
+        "icon.png",
+        "main.js",
+        "main.js.sig",
+        "tsconfig.json"
+      ]
+    },
+    {
+      "path": "sources/pepper-and-carrot",
+      "name": "Pepper&Carrot",
+      "version": "1.0.0",
+      "hash": "sha256-71f3fd68f3942693358f749ed7bd13c16143ff83ae7077092453b7e3a9679e7a",
+      "files": [
+        "extension.json",
+        "icon.png",
+        "main.js",
+        "main.js.sig",
+        "tsconfig.json"
+      ]
+    },
+    {
+      "path": "sources/xkcd",
+      "name": "xkcd",
+      "version": "1.0.0",
+      "hash": "sha256-96f5cac1f38bb13d1ed850d3f429b7764198413697ba905b50ce74689cad6e07",
+      "files": [
+        "extension.json",
+        "icon.png",
+        "main.js",
+        "main.js.sig",
+        "tsconfig.json"
+      ]
+    }
+  ]
+}
