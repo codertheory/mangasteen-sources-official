@@ -63,7 +63,7 @@ Bump `version` in `extension.json` on every change — the app uses it to detect
 
 `index.json` at the repository root lists every source in `sources/`: its path, name, version, the files in its folder and a hash of those files. Mangasteen reads it from `raw.githubusercontent.com`, so a refresh takes one request and only downloads the sources whose hash changed. Folders such as `fixtures/` are not listed and never downloaded.
 
-After changing a source, run `npm run index` to regenerate the file and commit it. `npm run sign` runs the index step after signing, so the signature files are included in the hash. A GitHub Actions check fails when the committed `index.json` does not match a fresh run.
+After changing a source, run `npm run index` to regenerate the file and commit it. `npm run sign` runs the index step after signing, so the signature files are included in the hash. A GitHub Actions check fails when the committed `index.json` does not match a fresh run. Flat `.js` files directly under `sources/` are rejected by the index step, so keep each source in its own folder as `sources/<name>/main.js`.
 
 ## License
 
