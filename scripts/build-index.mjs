@@ -64,6 +64,12 @@ for (const folder of folders) {
     version,
     hash: `sha256-${hash.digest("hex")}`,
     files,
+    fileHashes: Object.fromEntries(
+      files.map((file) => [
+        file,
+        createHash("sha256").update(readFileSync(join(dir, file))).digest("hex"),
+      ]),
+    ),
   });
 }
 

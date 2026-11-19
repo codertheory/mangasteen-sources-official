@@ -13,7 +13,15 @@
         "main.js",
         "main.js.sig",
         "tsconfig.json"
-      ]
+      ],
+      "fileHashes": {
+        "extension.json": "189d467d64928d975d7a47373a676a9ff3db359a311f5e5266b892d360815286",
+        "host-globals.d.ts": "52713f841b0fc896c8ece504abe699f1bddc471c3589de8372fe6aa15458d05e",
+        "icon.png": "f1b6671a004b58704cca4cad107dc1d79413e31812f7f116815e49a31dc2db13",
+        "main.js": "a14669c3af65dd8da809e515b80d3e290711546e4bc681f2c39128f1a5785ff1",
+        "main.js.sig": "d3eb66a14396e10522e197b361facc9d88a8d675ddffe36094894cfb1e057c8d",
+        "tsconfig.json": "29274c8cc5e7c5b64428758b36031ccedd034de6f594681db5829abb9ebfb0b5"
+      }
     },
     {
       "path": "sources/pepper-and-carrot",
@@ -26,7 +34,14 @@
         "main.js",
         "main.js.sig",
         "tsconfig.json"
-      ]
+      ],
+      "fileHashes": {
+        "extension.json": "3f63fdcaa9d664bb447f16aaae7590f64fee149260489019e44bcf87d2c63914",
+        "icon.png": "10bf3862eddf771986507f42fc7a41c76fe8ad2077bce9a41190b7ca8dcd2d8d",
+        "main.js": "5d936a7bafa8a21cd4df2463c19c9b3d2a2b5b07a0efce277a6bbdf148f70391",
+        "main.js.sig": "5bf6782ed58aeb7d048c294e28059a2b2c40e384e63bd4b5886ab93bcabb0498",
+        "tsconfig.json": "29274c8cc5e7c5b64428758b36031ccedd034de6f594681db5829abb9ebfb0b5"
+      }
     },
     {
       "path": "sources/xkcd",
@@ -39,7 +54,14 @@
         "main.js",
         "main.js.sig",
         "tsconfig.json"
-      ]
+      ],
+      "fileHashes": {
+        "extension.json": "c31225da335378a40e567f92e2ceccc0d193a6d9e871e67501679b6348bdb317",
+        "icon.png": "ec416b42c1fd7001a1e844c11640c55e5d9cfb83e1770cdeac668a69fec647fc",
+        "main.js": "3fcf63929c1de0fc7097f898d814b61e109fb93128f1a7ef6302c505e55adf05",
+        "main.js.sig": "0a89641100f264cf34cd7e5b36cafd9804e3d917c8618806f414f466b630eef3",
+        "tsconfig.json": "29274c8cc5e7c5b64428758b36031ccedd034de6f594681db5829abb9ebfb0b5"
+      }
     }
   ]
 }
