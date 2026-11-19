@@ -59,6 +59,12 @@ npm run sign         # re-sign sources/*/main.js (required after any main.js cha
 
 Bump `version` in `extension.json` on every change — the app uses it to detect updates.
 
+## index.json
+
+`index.json` at the repository root lists every source in `sources/`: its path, name, version, the files in its folder and a hash of those files. Mangasteen reads it from `raw.githubusercontent.com`, so a refresh takes one request and only downloads the sources whose hash changed. Folders such as `fixtures/` are not listed and never downloaded.
+
+After changing a source, run `npm run index` to regenerate the file and commit it. `npm run sign` runs the index step after signing, so the signature files are included in the hash. A GitHub Actions check fails when the committed `index.json` does not match a fresh run.
+
 ## License
 
 MIT, same as the template. Source scripts talk to third-party services under those services'

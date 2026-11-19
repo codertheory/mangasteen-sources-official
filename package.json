@@ -11,7 +11,8 @@
     "typecheck": "for s in $(ls sources); do tsc --noEmit -p sources/$s || exit 1; done",
     "build": "esbuild sources/mangadex/main.js --bundle --outfile=sources/mangadex/release.js --platform=browser --target=es2020 --format=cjs",
     "record": "node tools/record-fixtures.js",
-    "sign": "bash scripts/sign-sources.sh"
+    "sign": "bash scripts/sign-sources.sh && npm run index",
+    "index": "node scripts/build-index.mjs"
   },
   "dependencies": {
     "axios": "^1.13.5",
