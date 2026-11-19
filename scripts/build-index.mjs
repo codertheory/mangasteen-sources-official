@@ -12,6 +12,13 @@ function fail(message) {
   process.exit(1);
 }
 
+for (const entry of readdirSync(sourcesDir, { withFileTypes: true })) {
+  if (entry.isFile() && entry.name.endsWith(".js")) {
+    const stem = entry.name.slice(0, -3);
+    fail(`move sources/${entry.name} into sources/${stem}/main.js (flat files are not supported in index.json)`);
+  }
+}
+
 const sources = [];
 const folders = readdirSync(sourcesDir, { withFileTypes: true })
   .filter((entry) => entry.isDirectory())
